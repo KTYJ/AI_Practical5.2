@@ -13,6 +13,6 @@ user_input = st.text_input("Enter any sentence... :")
 
 # Predict the house price
 if st.button('Predict Spam/Ham'):
-    Snew = cv.transform(user_input)
-    result = lr.predict(user_input)
+    Snew = cv.transform([user_input])
+    result = lr.predict(Snew)
     st.write(f"The predicted sentiment is: {result[0]}")
